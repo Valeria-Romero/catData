@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <% if( found ){ %>
+        <h1>Details page for <%= catInfo.name %></h1>
+
+        <img src="./images/<%= catInfo.image %>" alt="Cat picture" style="width: 400px;">
+        <h2>Favorite food: <%= catInfo.favFood %></h2>
+        <h2>Age: <%= catInfo.age %></h2>
+        <h2>Sleeping spots:</h2>
+        <% for( let j=0; j<catInfo.sleepSpot.length; j++ ){ %>
+            
+            <p>
+                <% catInfo.sleepSpot[j] %>
+            </p>
+
+        <% } %>
+    <% } %>    
+</body>
+</html>
